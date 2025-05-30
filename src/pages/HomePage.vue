@@ -140,11 +140,17 @@
           <div class="socialmediacontainer row q-col-gutter-md">
             <!-- First Image Div (GIF/Video) -->
             <div class="col-12 col-sm-6" style="padding: 0px">
-              <q-img
-                src="assets/siteassets/homesetsection/video.gif"
-                alt="First Image"
+              <video
                 class="socialmedia"
-              />
+                autoplay
+                muted
+                loop
+                playsinline
+                style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit"
+              >
+                <source src="assets/siteassets/homesetsection/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
 
             <!-- Second Image Div (Image) -->
