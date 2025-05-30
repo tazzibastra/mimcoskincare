@@ -738,7 +738,7 @@ export default {
           image: 'assets/siteassets/sets/justagirl.png',
           description: '2 x Hydrating Plump lip oils',
           price: 200.0,
-          discount: 118.0,
+          discount: 218.0,
           units: 8,
           skintype: 'Combination',
           quantity: 1,
