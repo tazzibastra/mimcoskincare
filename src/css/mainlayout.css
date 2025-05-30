@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+.q-header {
+  transition: background-color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.scrolled-header {
+  background-color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.q-layout__section--marginal {
+  background-color: transparent;
+  color: inherit; /* Keeps the text color or you can set it to black/white */
+  box-shadow: none; /* Removes any shadows if necessary */
+}
+
+.title-font {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700; /* Adjust for boldness if needed */
+  letter-spacing: -0.08em;
+  font-size: 35px;
+}
+.custom-input .q-field__control {
+  border-radius: 10px !important; /* Adjust the radius as needed */
+}
+.gradient-bg {
+  background: #ffffff; /* Pastel pink to white */
+  height: 100%; /* Ensures the gradient covers the entire viewport height */
+  width: 100%; /* Ensures the gradient spans the full width */
+}
+
+.q-page {
+  min-height: 100vh;
+}
+
+.my-card {
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.my-card:hover {
+  transform: scale(1.05);
+}
+
+.no-decoration {
+  text-decoration: none;
+  color: inherit;
+}
+@keyframes scrollText {
+  0% {
+    transform: translateX(0); /* Start at the left */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left fully */
+  }
+}
+.bg-light-gray {
+  background-color: white;
+}
+.text-dark {
+  color: #343a40;
+}
+
+.text-primary {
+  color: black !important;
+  font-size: 15px !important;
+}
+
+.text-bold {
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700; /* Adjust for boldness if needed */
+  letter-spacing: -0.08em;
+  font-size: 15px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.title-font-sidebar {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700; /* Adjust for boldness if needed */
+  letter-spacing: -0.08em;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.hover-underline {
+  text-decoration: none;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
+.list-none {
+  list-style: none;
+  padding: 0;
+}
+
+.social-icon-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 60px;
+}
+
+.social-icon img {
+  height: 2rem;
+  width: 2rem;
+  transition: transform 0.2s;
+}
+
+.social-icon img:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: px) {
+  .social-icon img {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .hidden-trigger {
+    position: fixed;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000000;
+    padding: 5px 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem; /* Slightly bigger text */
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    z-index: 1000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+  }
+}
+
+.q-btn--rounded {
+  border-radius: 3px;
+  border: 0.1px solid;
+  background-color: white;
+}
+
+.bg-primary {
+  background: white !important;
+}
+
+.text-white {
+  color: black !important;
+}
+
+.q-field__control {
+  color: black !important;
+  height: 56px;
+  max-width: 100%;
+  outline: none;
+}
+.desktop.q-drawer {
+  width: 400px !important;
+}
+
+.hidden-trigger {
+  position: fixed;
+  right: 45px; /* Move it slightly from the right edge */
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg); /* Keep the text rotation */
+  background-color: #000000;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem; /* Slightly bigger text */
+  cursor: pointer;
+  z-index: 1000;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  white-space: nowrap; /* Ensures text doesn't wrap */
+  border-top-right-radius: 10px; /* Add radius to the top-right to complete the rounded effect */
+  border-bottom-right-radius: 10px; /* Add radius to the bottom-right */
+  transform-origin: top right; /* Ensures rotation keeps the correct position */
+}
+
+.hidden-trigger .gift-icon {
+  width: 20px; /* Adjust size of the image */
+  height: auto; /* Keep aspect ratio */
+  margin-left: 10px; /* Adds spacing between text and image */
+}
+
+.popup-card {
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  text-align: center;
+}
+.popup-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.popup-heading {
+  font-size: 1rem; /* Larger font size */
+  font-weight: bold;
+  color: #333; /* Darker color for better readability */
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* You can adjust the font family */
+
+  line-height: 25px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background-color: #000000;
+  color: white;
+  width: 100%;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+}
