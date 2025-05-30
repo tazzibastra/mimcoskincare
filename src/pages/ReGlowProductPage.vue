@@ -138,7 +138,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/3.svg'
+import product1 from '/assets/siteassets/Reglow/reglowcream.png'
 import {
   getFirestore,
   collection,
@@ -162,9 +162,9 @@ export default {
           'Restore your radiance with ReGlow! Formulated with Tremella mushroom, a plant-based alternative to hyaluronic acid, and nourishing squalane, it helps rebuild a healthy skin barrier—leaving your skin soft, plump, and naturally dewy. ',
         size: '30ml',
         arrayofimages: [
-          '/assets/siteassets/3.svg',
-          '/assets/siteassets/reglow-betterq.jpg',
-          '/assets/siteassets/re-glow.png',
+          'assets/siteassets/Reglow/reglowcream.png',
+          '/assets/siteassets/Reglow/reglow-betterq.jpg',
+          '/assets/siteassets/Reglow/results.jpg',
         ],
         productingredients:
           'Aqua/Water/Eau, Rosa Damascena Flower Water, Cetearyl Alcohol, Caprylic/Capric Triglyceride, Coconut Alkanes, Glyceryl Caprylate, Glycerin, Squalane, Glyceryl Stearate, Isoamyl Laurate, Microcrystalline Cellulose, Butyrospermum Parkii (Shea) Butter, Tremella Fuciformis Sporocarp Extract, Sodium Hyaluronate, Cocos Nucifera (Coconut) Fruit Juice, Camellia Sinensis Leaf Extract, Aloe Barbadensis Leaf Juice, Eclipta Prostrata Extract, Melia Azadirachta Leaf Extract, Moringa Oleifera Seed Oil, Coco-Caprylate/Caprate, Sodium Stearoyl Glutamate, Cetearyl Glucoside, Cellulose Gum, Tapioca Starch, Glyceryl Stearate Citrate, Citric Acid, Tetrasodium Glutamate Diacetate, Caprylhydroxamic Acid, Sodium Hydroxide, Citronellol, Geraniol.',

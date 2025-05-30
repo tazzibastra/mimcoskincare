@@ -101,7 +101,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/H.svg'
+import product1 from '/assets/siteassets/sets/justagirl.png'
 import {
   getFirestore,
   collection,
@@ -123,7 +123,7 @@ export default {
         productdescription:
           'Discover the perfect lip care duo with our Lip Oil Bundle. This set includes two nourishing lip oils that hydrate, smooth, and add a natural shine to your lips. Infused with moisture-rich ingredients, they leave your lips soft and revitalized all day long. Ideal for everyday use or as a thoughtful gift.',
         size: '6ml',
-        arrayofimages: ['/assets/siteassets/H.svg'],
+        arrayofimages: ['/assets/siteassets/sets/justagirl.png'],
         productingredients:
           'Hydrogenated Polysobutene, Isononyl Isononanoate, Ethylene/Propylene/Styrene Copolymer, Diisostearyl Malate, Polybutene, Aroma/Flavor, BHI, Butylene/Ethylene/Styrene Copolymer, Caprylic/Capric Triglyceride, Passiflora Edulis Seed Oil, Citrullus Vulgaris (Watermelon) Fruit Extract, Citrullus Vulgaris (Watermelon) Seed Extract, Pentaerythrityl Tetra-Di-Butyl Hydroxyhydrocinnamate, Rubus Idaeus (Raspberry) Leaf Extract, Rubus Idaeus (Raspberry) Seed Oil, Tocopherol, Tocopheryl Acetate, Triethoxycaprylylsilane.',
         whyweloveit:

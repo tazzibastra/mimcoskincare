@@ -139,7 +139,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/2.svg'
+import product1 from '/assets/siteassets/RePurify/repurifycream.png'
 import {
   getFirestore,
   collection,
@@ -162,7 +162,10 @@ export default {
         productdescription:
           'A pore treatment + moisturizer in one formulated with white willow bark BHA and blue tansy oil to deep clean congested pores and balance hydration levels with a soft, matte finish.',
         size: '30ml',
-        arrayofimages: ['/assets/siteassets/2.svg', '/assets/siteassets/repurify.png'],
+        arrayofimages: [
+          'assets/siteassets/RePurify/repurifycream.png',
+          '/assets/siteassets/RePurify/repurify.png',
+        ],
         productingredients:
           'Aqua (Water), Caprylic/Capric Triglyceride, Cetearyl Alcohol, Glycerin, Squalane, Glyceryl Caprylate, Microcrystalline Cellulose, Propanediol, Salix Nigra (Willow) Bark Extract, Zinc PCA, Aloe Barbadensis (Aloe Vera) Flower Extract, Camellia Sinensis (Green Tea) Leaf Extract, Coccinia Indica Fruit Extract, Corallina Officinalis Extract, Curcuma Longa (Turmeric) Root Extract, Hamamelis Virginiana (Witch Hazel) Extract, Melia Azadirachta (Neem) Flower Extract, Melia Azadirachta (Neem) Leaf Extract, Ocimum Basilicum (Basil) Flower/Leaf Extract, Ocimum Sanctum (Holy Basil) Leaf Extract, Solanum Melongena (Eggplant) Fruit Extract, Tanacetum Annuum (Blue Tansy) Flower Oil, Lactobacillus Ferment, Sodium Hyaluronate, Sodium PCA, Magnesium PCA, Sodium Stearoyl Glutamate, Cellulose Gum, Glyceryl Stearate Citrate, Caprylyl Glyceryl Ether, Caprylhydroxamic Acid.',
         whyweloveit: 'Balances & Calms, Lightweight, glowy non greasy finish',

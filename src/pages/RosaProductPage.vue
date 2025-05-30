@@ -139,7 +139,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/5.svg'
+import product1 from '/assets/siteassets/Rosa/rosa.png'
 import {
   getFirestore,
   collection,
@@ -163,7 +163,12 @@ export default {
         productdescription:
           'A silky, weightless serum powered by three ultra-hydrating ingredients—tremella mushroom, vegan collagen, and glycerin—to deeply replenish moisture, leaving your skin plump, dewy, and glowing all day.',
         size: '30ml',
-        arrayofimages: ['/assets/siteassets/5.svg', '/assets/siteassets/rosa-2.png'],
+        arrayofimages: [
+          'assets/siteassets/Rosa/rosa.png',
+          '/assets/siteassets/Rosa/rosa-2.png',
+          '/assets/siteassets/Rosa/rosa-new.jpg',
+          'assets/siteassets/homesetsection/rosa.jpg',
+        ],
         productingredients:
           'Aqua (Water), Aloe Barbadensis Leaf Juice, Glycerin, Hydrolyzed Corn Starch Hydroxyethyl Ether, Rosa Damascena (Rose) Flower Water, Tremella Fuciformis Sporocarp Extract, Collagen, Fragaria Vesca (Strawberry) Fruit Extract, Prunus Persica (Peach) Fruit Extract, Hibiscus Sabdariffa Flower Extract, Leuconostoc/Radish Root Ferment Filtrate, Microcrystalline Cellulose, Sodium Phytate, Gluconolactone, Glyceryl Caprylate, Arginine, Eclipta Prostrata Extract, Melia Azadirachta Leaf Extract, Moringa Oleifera Seed Oil, Citric Acid, Potassium Sorbate',
         whyweloveit:

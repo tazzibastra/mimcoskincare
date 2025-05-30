@@ -140,7 +140,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/H.svg'
+import product1 from '/assets/siteassets/Pretty/pretty.png'
 import {
   getFirestore,
   collection,
@@ -163,7 +163,11 @@ export default {
         productdescription:
           'A nourishing blend that hydrates, softens, and plumps lips with a glossy finish and moisture-rich texture.',
         size: '6ml',
-        arrayofimages: ['/assets/siteassets/H.svg', '/assets/siteassets/pretty.jpg'],
+        arrayofimages: [
+          'assets/siteassets/Pretty/pretty.png',
+          '/assets/siteassets/Pretty/pretty.jpg',
+          '/assets/siteassets/Pretty/results-lipoil.webp',
+        ],
         productingredients:
           'Hydrogenated Polysobutene, Isononyl Isononanoate, Ethylene/Propylene/Styrene Copolymer, Diisostearyl Malate, Polybutene, Aroma/Flavor, BHI, Butylene/Ethylene/Styrene Copolymer, Caprylic/Capric Triglyceride, Passiflora Edulis Seed Oil, Citrullus Vulgaris (Watermelon) Fruit Extract, Citrullus Vulgaris (Watermelon) Seed Extract, Pentaerythrityl Tetra-Di-Butyl Hydroxyhydrocinnamate, Rubus Idaeus (Raspberry) Leaf Extract, Rubus Idaeus (Raspberry) Seed Oil, Tocopherol, Tocopheryl Acetate, Triethoxycaprylylsilane.',
         whyweloveit:

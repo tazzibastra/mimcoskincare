@@ -5,8 +5,15 @@
         <!-- Home Video Section -->
         <div class="video-container">
           <picture>
-            <source srcset="/assets/siteassets/hero-mobile.png" media="(max-width: 768px)" />
-            <img src="/assets/siteassets/home.png" alt="Hero Image" class="video-img" />
+            <source
+              srcset="/assets/siteassets/heroimages/heroimagemobile.png"
+              media="(max-width: 768px)"
+            />
+            <img
+              src="/assets/siteassets/heroimages/heroimagedesktop.png"
+              alt="Hero Image"
+              class="video-img"
+            />
           </picture>
         </div>
 
@@ -67,14 +74,35 @@
         </div>
       </div> -->
 
-        <div class="shipping-banner">
-          <span>FREE SHIPPING OVER 550!!!</span>
-        </div>
-
         <!-- Home Shop New Section -->
         <div>
-          <div class="title-font-second-bundle text-content-1" style="padding-left: 15px">
-            <span>BEST SELLERS</span>
+          <div
+            class="title-font"
+            style="text-align: center; padding-top: 40px; padding-bottom: 20px"
+          >
+            <img
+              src="assets/siteassets/flower.png"
+              alt="flower"
+              style="
+                width: 15px;
+                height: 15px;
+                vertical-align: middle;
+                margin-right: 10px;
+                margin-bottom: 5px;
+              "
+            />
+            <span style="font-weight: bold">MOST LOVED</span>
+            <img
+              src="assets/siteassets/flower.png"
+              alt="flower"
+              style="
+                width: 15px;
+                height: 15px;
+                vertical-align: middle;
+                margin-left: 10px;
+                margin-bottom: 5px;
+              "
+            />
           </div>
           <div
             style="margin-top: 10px; margin-bottom: 20px; display: flex; justify-content: center"
@@ -99,6 +127,86 @@
                   :discount="product.discount"
                   :units="product.units"
                   :skintype="product.skintype"
+                  :rating="product.rating"
+                  :totalreviews="product.totalreviews"
+                  @add-to-cart="handleAddToCart"
+                  @change-quantity="updateQuantity"
+                />
+              </swiper-slide>
+            </swiper>
+          </div>
+        </div>
+        <div class="q-pa-md row justify-center">
+          <div class="socialmediacontainer row q-col-gutter-md">
+            <!-- First Image Div (GIF/Video) -->
+            <div class="col-12 col-sm-6" style="padding: 0px">
+              <q-img
+                src="assets/siteassets/homesetsection/video.gif"
+                alt="First Image"
+                class="socialmedia"
+              />
+            </div>
+
+            <!-- Second Image Div (Image) -->
+            <div class="col-12 col-sm-6" style="padding: 0px">
+              <q-img
+                src="assets/siteassets/homesetsection/rosa.jpg"
+                alt="Second Image"
+                class="socialmedia"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="title-font" style="text-align: center; padding-bottom: 20px">
+          <img
+            src="assets/siteassets/flower.png"
+            alt="flower"
+            style="
+              width: 15px;
+              height: 15px;
+              vertical-align: middle;
+              margin-right: 10px;
+              margin-bottom: 5px;
+            "
+          />
+          <span style="font-weight: bold">SHOP SETS</span>
+          <img
+            src="assets/siteassets/flower.png"
+            alt="flower"
+            style="
+              width: 15px;
+              height: 15px;
+              vertical-align: middle;
+              margin-left: 10px;
+              margin-bottom: 5px;
+            "
+          />
+        </div>
+        <!-- Home Bundle Section -->
+
+        <div class="bundlediv">
+          <div style="margin-top: 10px">
+            <swiper
+              :slides-per-view="1.2"
+              :space-between="20"
+              :initial-slide="0"
+              :breakpoints="{
+                640: { slidesPerView: 1.5, spaceBetween: 20 },
+                1024: { slidesPerView: 2.5, spaceBetween: 30 },
+              }"
+              pagination
+            >
+              <swiper-slide v-for="product in images" :key="product.id">
+                <ProductCard
+                  :productid="product.productid"
+                  :image="product.image"
+                  :name="product.name"
+                  :description="product.description"
+                  :price="product.price"
+                  :discount="product.discount"
+                  :units="product.units"
+                  :skintype="product.save"
                   :rating="product.rating"
                   :totalreviews="product.totalreviews"
                   @add-to-cart="handleAddToCart"
@@ -319,7 +427,10 @@
             </div>
 
             <!-- Description on the Right -->
-            <div class="col-11 col-md-6 column justify-between items-center">
+            <div
+              class="col-11 col-md-6 column justify-between items-center"
+              style="margin-bottom: 50px"
+            >
               <div>
                 <div
                   class="text-h5 q-mb-sm text-center"
@@ -358,91 +469,7 @@
           </div>
         </div>
 
-        <div class="text-h1 title-font-mindcare-bundle">SHOP BUNDLES</div>
-        <!-- Home Bundle Section -->
-        <div class="bundlediv">
-          <div style="margin-top: 10px">
-            <swiper
-              :slides-per-view="1.2"
-              :space-between="20"
-              :initial-slide="0"
-              :breakpoints="{
-                640: { slidesPerView: 1.5, spaceBetween: 20 },
-                1024: { slidesPerView: 2.5, spaceBetween: 30 },
-              }"
-              pagination
-            >
-              <swiper-slide v-for="product in images" :key="product.id">
-                <ProductCard
-                  :productid="product.productid"
-                  :image="product.image"
-                  :name="product.name"
-                  :description="product.description"
-                  :price="product.price"
-                  :discount="product.discount"
-                  :units="product.units"
-                  :skintype="product.save"
-                  :rating="product.rating"
-                  :totalreviews="product.totalreviews"
-                  @add-to-cart="handleAddToCart"
-                  @change-quantity="updateQuantity"
-                />
-              </swiper-slide>
-            </swiper>
-          </div>
-        </div>
         <!-- About us Section -->
-        <swiper
-          :slides-per-view="1.2"
-          :space-between="40"
-          :initial-slide="0"
-          :breakpoints="{
-            640: { slidesPerView: 1.3, spaceBetween: 20 },
-            1024: { slidesPerView: 2.5, spaceBetween: 30 },
-          }"
-          pagination
-        >
-          <swiper-slide>
-            <img
-              src="assets/siteassets/aboutus/about us (1).png"
-              alt="Image description"
-              class="custom-image"
-            />
-          </swiper-slide>
-
-          <!-- New slide with a div -->
-          <swiper-slide>
-            <img
-              src="assets/siteassets/aboutus/about us (2).png"
-              alt="Image description"
-              class="custom-image"
-            />
-          </swiper-slide>
-
-          <swiper-slide>
-            <img
-              src="assets/siteassets/aboutus/about us (3).png"
-              alt="Image description"
-              class="custom-image"
-            />
-          </swiper-slide>
-
-          <swiper-slide>
-            <img
-              src="assets/siteassets/aboutus/about us (4).png"
-              alt="Image description"
-              class="custom-image"
-            />
-          </swiper-slide>
-
-          <swiper-slide>
-            <img
-              src="assets/siteassets/aboutus/about us (5).png"
-              alt="Image description"
-              class="custom-image"
-            />
-          </swiper-slide>
-        </swiper>
       </div>
     </q-page>
   </q-page-container>
@@ -474,18 +501,6 @@ export default {
       // Hardcoded product data
       tab: ref('mails'),
       products: [
-        {
-          productid: 'rekindle',
-          name: 'ReKindle',
-          image: 'assets/siteassets/rekindle.png',
-          description: 'Breakout Prevention Purifying Cleanser + Makeup Remover',
-          price: 159.0,
-          discount: 0.0,
-          units: 10,
-          skintype: 'Oily Skin',
-          rating: 4,
-          totalreviews: '1 reviews',
-        },
         // {
         //   productid: 'holyglaze',
         //   name: 'The Holy Glaze',
@@ -527,7 +542,7 @@ export default {
         {
           productid: 'resparkle',
           name: 'ReSparkle',
-          image: '/assets/siteassets/resparkle.png',
+          image: '/assets/siteassets/resparkle/resparkle.png',
           description: 'Fine lines + Texture + Uneven tone waterbase formula',
           price: 259.0,
           discount: 0.0,
@@ -539,7 +554,7 @@ export default {
         {
           productid: 'rosa',
           name: 'Rosa',
-          image: 'assets/siteassets/rosa.png',
+          image: '/assets/siteassets/Rosa/rosa.png',
           description: 'Plump + Ultra-hydrating dewy serum with Tremella Mushroom',
           price: 289.0,
           discount: 0.0,
@@ -549,9 +564,21 @@ export default {
           totalreviews: '7 reviews',
         },
         {
+          productid: 'rekindle',
+          name: 'ReKindle',
+          image: 'assets/siteassets/ReKindle/rekindle.png',
+          description: 'Breakout Prevention Purifying Cleanser + Makeup Remover',
+          price: 159.0,
+          discount: 0.0,
+          units: 10,
+          skintype: 'Oily Skin',
+          rating: 4,
+          totalreviews: '1 reviews',
+        },
+        {
           productid: 'pretty',
           name: 'Pretty',
-          image: 'assets/siteassets/pretty.png',
+          image: 'assets/siteassets/Pretty/pretty.png',
           description: 'Hydrating + barrier-protecting + Glossy Shine Lip Oil',
           price: 109.0,
           discount: 0.0,
@@ -565,7 +592,7 @@ export default {
         {
           productid: 'rekindle',
           name: 'ReKindle',
-          image: 'assets/siteassets/rekindle.png',
+          image: 'assets/siteassets/ReKindle/rekindle.png',
           description: 'Breakout Prevention Purifying Cleanser + Makeup Remover',
           price: 159.0,
           discount: 0.0,
@@ -579,7 +606,7 @@ export default {
         {
           productid: 'pretty',
           name: 'Pretty',
-          image: 'assets/siteassets/pretty.png',
+          image: 'assets/siteassets/Pretty/pretty.png',
           description: 'Hydrating + barrier-protecting + Glossy Shine Lip Oil',
           price: 109.0,
           discount: 0.0,
@@ -593,7 +620,7 @@ export default {
         {
           productid: 'holyglaze',
           name: 'The Holy Glaze',
-          image: 'assets/siteassets/The Holy Glaze Facial Oil.png',
+          image: 'assets/siteassets/HolyGlaze/The Holy Glaze Facial Oil.png',
           description: 'Even + Brighten Skin with Rice and Vitamin C',
           price: 325.0,
           discount: 0.0,
@@ -619,7 +646,7 @@ export default {
         {
           productid: 'reglow',
           name: 'ReGlow',
-          image: 'assets/siteassets/reglowcream.png',
+          image: 'assets/siteassets/Reglow/reglowcream.png',
           description: 'Plump + Ultra-hydrating with Tremella Mushroom',
           price: 259.0,
           discount: 0.0,
@@ -632,7 +659,7 @@ export default {
         {
           productid: 'repurify',
           name: 'RePurify',
-          image: 'assets/siteassets/repurifycream.png',
+          image: 'assets/siteassets/RePurify/repurifycream.png',
           description: 'Pore Treament + Breakout Prevention moisturiser',
           price: 259.0,
           discount: 0.0,
@@ -646,7 +673,7 @@ export default {
         {
           productid: 'resparkle',
           name: 'ReSparkle',
-          image: '/assets/siteassets/resparkle.png',
+          image: '/assets/siteassets/resparkle/resparkle.png',
           description: 'Fine lines + Texture + Uneven tone',
           price: 259.0,
           discount: 0.0,
@@ -658,7 +685,7 @@ export default {
         {
           productid: 'rosa',
           name: 'Rosa',
-          image: 'assets/siteassets/rosa.png',
+          image: 'assets/siteassets/Rosa/rosa.png',
           description: 'Plump + Ultra-hydrating dewy serum with Tremella Mushroom',
           price: 289.0,
           discount: 0.0,
@@ -672,7 +699,7 @@ export default {
         {
           productid: 'myturn',
           name: 'My Turn',
-          image: 'assets/siteassets/myturnbundle.png',
+          image: 'assets/siteassets/sets/myturnbundle.png',
           description: 'Full Hydration Plump Combo',
           price: 667.0,
           discount: 924.0,
@@ -687,7 +714,7 @@ export default {
         {
           productid: 'therapyera',
           name: 'Therapy Era',
-          image: 'assets/siteassets/therapyera.png',
+          image: 'assets/siteassets/sets/therapyera.png',
           description: 'Essential Hydrating Combo',
           price: 508.0,
           discount: 753.0,
@@ -702,7 +729,7 @@ export default {
         {
           productid: 'justagirl',
           name: 'Just A Girl',
-          image: 'assets/siteassets/justagirl.png',
+          image: 'assets/siteassets/sets/justagirl.png',
           description: '2 x Hydrating Plump lip oils',
           price: 200.0,
           discount: 118.0,
@@ -997,7 +1024,15 @@ export default {
   mounted() {
     //Generate a session ID if user is not logged in (for anonymous tracking)
     // Generate a session ID if user is not logged in (for anonymous tracking)
-
+    if (window.instgrm) {
+      window.instgrm.Embeds.process()
+    } else {
+      // Otherwise, load the Instagram embed script
+      const script = document.createElement('script')
+      script.setAttribute('src', 'https://www.instagram.com/embed.js')
+      script.onload = () => window.instgrm.Embeds.process()
+      document.body.appendChild(script)
+    }
     console.log('environment', process.env.NODE_ENV)
     if (process.env.NODE_ENV === 'production') {
       let sessionID = localStorage.getItem('sessionID')
@@ -1084,5 +1119,46 @@ export default {
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid white;
   z-index: 1;
+}
+
+.title-font {
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700; /* Adjust for boldness if needed */
+  letter-spacing: -0.08em;
+  font-size: 20px;
+}
+
+.socialmedia {
+  height: 55%;
+  object-fit: cover;
+  padding: 0px !important;
+}
+
+.socialmediacontainer {
+  max-width: 1600px;
+  width: 90%;
+  height: 510px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 640px) {
+  .socialmedia {
+    height: 100%;
+    object-fit: cover;
+    padding: 0px !important;
+  }
+
+  .socialmediacontainer {
+    width: 90%;
+    height: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    margin-left: 5px;
+  }
 }
 </style>

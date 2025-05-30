@@ -18,7 +18,7 @@
   font-family: 'League Spartan', sans-serif;
   font-weight: 700; /* Adjust for boldness if needed */
   letter-spacing: -0.08em;
-  font-size: 35px;
+  font-size: 25px;
 }
 .custom-input .q-field__control {
   border-radius: 10px !important; /* Adjust the radius as needed */

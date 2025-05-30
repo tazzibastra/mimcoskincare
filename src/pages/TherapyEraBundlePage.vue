@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/6.svg'
+import product1 from '/assets/siteassets/sets/6.svg'
 import {
   getFirestore,
   collection,
@@ -102,7 +102,7 @@ export default {
         productdescription:
           'Replenish and refresh with our Essential Hydrating Combo. This set includes key products designed to deeply hydrate and nourish your skin, leaving it soft, smooth, and glowing. Perfect for daily use to maintain a healthy, moisturized complexion.',
         size: '6ml',
-        arrayofimages: ['/assets/siteassets/6.png'],
+        arrayofimages: ['/assets/siteassets/sets/6.svg'],
         productingredients:
           'Hydrogenated Polysobutene, Isononyl Isononanoate, Ethylene/Propylene/Styrene Copolymer, Diisostearyl Malate, Polybutene, Aroma/Flavor, BHI, Butylene/Ethylene/Styrene Copolymer, Caprylic/Capric Triglyceride, Passiflora Edulis Seed Oil, Citrullus Vulgaris (Watermelon) Fruit Extract, Citrullus Vulgaris (Watermelon) Seed Extract, Pentaerythrityl Tetra-Di-Butyl Hydroxyhydrocinnamate, Rubus Idaeus (Raspberry) Leaf Extract, Rubus Idaeus (Raspberry) Seed Oil, Tocopherol, Tocopheryl Acetate, Triethoxycaprylylsilane.',
         whyweloveit: '1 Pretty Lip oil, 1 Reglow Moisturiser, 1 Rosa Hydrating Serum',

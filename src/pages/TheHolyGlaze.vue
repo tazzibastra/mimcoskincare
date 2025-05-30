@@ -156,7 +156,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/10.svg'
+import product1 from '/assets/siteassets/HolyGlaze/The Holy Glaze Facial Oil.png'
 import {
   getFirestore,
   collection,
@@ -181,11 +181,10 @@ export default {
           'This plant-based facial oil is powered by a stable form of Vitamin C, turmeric, rice, seabuckthorn, rosehip, and squalane to gently even out skin tone, fade dark marks, and restore a radiant, glazed glow — all without compromising your skin barrier.',
         size: '30ml',
         arrayofimages: [
-          '/assets/siteassets/10.svg',
-          '/assets/siteassets/11.svg',
-          '/assets/siteassets/12.svg',
-          '/assets/siteassets/13.svg',
-          '/assets/siteassets/14.svg',
+          'assets/siteassets/HolyGlaze/The Holy Glaze Facial Oil.png',
+          '/assets/siteassets/HolyGlaze/11.svg',
+          '/assets/siteassets/HolyGlaze/12.svg',
+          '/assets/siteassets/HolyGlaze/13.svg',
         ],
         productingredients:
           'Caprylic/Capric Triglyceride, Squalane, Hem Squalane, Rosa Canina (Rosehip) Fruit Oil, Oryza Sativa (Rice) Bran Oil, Hippophae Rhamnoides (Seabuckthorn) Fruit Oil, Curcuma Longa (Turmeric) Root Extract, Tetrahexyldecyl Ascorbate, Tocopherol.',

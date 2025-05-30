@@ -401,7 +401,7 @@ body {
 
 .video-container {
   width: 100%; /* Adjust width as needed */
-  height: 600px; /* Adjust height */
+  height: 800px; /* Adjust height */
   overflow: hidden;
   position: relative;
   display: flex;
@@ -490,7 +490,6 @@ body {
   color: #000000;
   margin-top: 10px;
 }
-
 
 @media (max-width: 640px) {
   .container_bundles {

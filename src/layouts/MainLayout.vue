@@ -14,10 +14,10 @@
     <q-header :class="{ 'scrolled-header': isScrolled }">
       <q-toolbar class="text-black">
         <q-btn flat dense round @click="toggleMenu">
-          <img src="assets/siteassets/hamburger.png" style="width: 24px; height: 24px" />
+          <img src="assets/siteassets/hamburger.png" style="width: 20px; height: 20px" />
         </q-btn>
         <q-toolbar-title class="title-font">
-          <router-link to="/" class="no-decoration">mimco.</router-link>
+          <router-link to="/" class="no-decoration">mimcoskin.</router-link>
         </q-toolbar-title>
         <!-- User Icon -->
         <!-- <q-btn flat round dense @click="navigateTo('ProfilePage')" aria-label="User">
@@ -69,7 +69,7 @@
           <q-item clickable class="cart-item" @click="navigateTo('RosaProductPage')">
             <q-item-section avatar>
               <q-img
-                src="assets/siteassets/5.svg"
+                src="assets/siteassets/Rosa/rosa.png"
                 class="cart-item-image"
                 style="border-radius: 20px; width: 80px"
               />
@@ -93,7 +93,7 @@
           <q-item clickable class="cart-item" @click="navigateTo('PrettyProductPage')">
             <q-item-section avatar>
               <q-img
-                src="assets/siteassets/H.svg"
+                src="assets/siteassets/Pretty/results-lipoil.webp"
                 class="cart-item-image"
                 style="border-radius: 20px; width: 80px"
               />
@@ -105,30 +105,6 @@
           </q-item>
         </div>
 
-        <div
-          style="
-            background-color: #f1f0ed;
-            border-radius: 20px;
-            margin-left: 10px;
-            margin-right: 10px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-          "
-        >
-          <q-item clickable class="cart-item" @click="navigateTo('ShopAll')">
-            <q-item-section avatar>
-              <q-img
-                src="assets/siteassets/6.svg"
-                class="cart-item-image"
-                style="border-radius: 20px; width: 80px"
-              />
-            </q-item-section>
-            <q-item-section>
-              <q-item-label>SHOP ALL</q-item-label>
-              <q-item-label caption>The entire range</q-item-label>
-            </q-item-section>
-          </q-item>
-        </div>
         <div
           class="text-h5 title-font-sidebar"
           style="padding-left: 10px; padding-top: 10px; margin-bottom: -15px"

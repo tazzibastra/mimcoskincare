@@ -140,7 +140,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/4.svg'
+import product1 from '/assets/siteassets/ReKindle/rekindle.png'
 import {
   getFirestore,
   collection,
@@ -163,7 +163,10 @@ export default {
         productdescription:
           'This cream-to-lather cleanser is great for acne-prone skin and helps rekindle your skin’s natural glow by gently removing makeup, dirt, and impurities, leaving your face feeling fresh and revitalized.',
         size: '100ml',
-        arrayofimages: ['/assets/siteassets/4.svg', '/assets/siteassets/rekindle4.jpg'],
+        arrayofimages: [
+          'assets/siteassets/ReKindle/rekindle.png',
+          '/assets/siteassets/ReKindle/rekindle4.jpg',
+        ],
         productingredients:
           'Aqua/Water/Eau, Rosa Damascena Flower Water, Decyl Glucoside, Glycerin, Sodium Lauroyl Lactylate, Squalane, Glyceryl Caprylate, Xanthan Gum, Glyceryl Stearate, Tremella Fuciformis Sporocarp Extract, Caprylhydroxamic Acid, Camellia Sinensis Leaf Extract, Aloe Barbadensis Leaf Juice, Citric Acid, Eclipta Prostrata Extract, Sodium Hyaluronate, Melia Azadirachta Leaf Extract, Moringa Oleifera Seed Oil, Cocos Nucifera (Coconut) Fruit Juice, Tapioca Starch.',
         whyweloveit:

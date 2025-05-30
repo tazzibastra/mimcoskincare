@@ -146,7 +146,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/unnamed.png'
+import product1 from '/assets/siteassets/resparkle/resparkle.png'
 import {
   getFirestore,
   collection,
@@ -170,9 +170,9 @@ export default {
           'Bakuchiol Serum is a naturally-derived retinol-alternative serum to help smooth the appearance of fine lines and wrinkles, improving texture while sealing in hydration, think all the benefits of retinol minus the irritation ',
         size: '30ml',
         arrayofimages: [
-          '/assets/siteassets/unnamed.png',
-          '/assets/siteassets/unnameds.jpg',
-          '/assets/siteassets/IMG_7815.jpg',
+          '/assets/siteassets/resparkle/resparkle.png',
+          '/assets/siteassets/resparkle/unnameds.jpg',
+          '/assets/siteassets/resparkle/IMG_7815.jpg',
         ],
         productingredients:
           'Aqua/Water/Eau, Aloe Barbadensis Leaf Water, Glycerin, Psoralea Corylifolia Seed Extract, Bakuchiol, Leuconostoc/ Radish Root Ferment Filtrate, Populus Tremuloides Bark Extract, Gluconolactone, Amethyst Extract, Sodium Phytate, Vaccinium Myrtillus Fruit/Leaf Extract, Vaccinium Angustifolium (Blueberry) Fruit Extract, Tremella Fuciformis Sporocarp Extract, Melia Azadirachta Flower Extract, Coccinia Indica Fruit Extract, Melia Azadirachta Leaf Extract, Corallina Officinalis Extract, Solanum Melongena (Eggplant) Fruit Extract, Aloe Barbadensis Flower Extract, Ocimum Sanctum Leaf Extract, Ocimum Basilicum (Basil) Flower/Leaf Extract, Curcuma Longa (Turmeric) Root Extract.',

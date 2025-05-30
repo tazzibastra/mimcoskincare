@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import product1 from '/assets/siteassets/7.svg'
+import product1 from '/assets/siteassets/sets/7.svg'
 import {
   getFirestore,
   collection,
@@ -102,7 +102,7 @@ export default {
         productdescription:
           'Achieve plump, hydrated skin with our Full Hydration Plump Combo. This set includes powerful products that deeply nourish and restore moisture, leaving your skin looking refreshed, smooth, and radiant. Perfect for a full hydration boost.',
         size: '6ml',
-        arrayofimages: ['/assets/siteassets/7.svg'],
+        arrayofimages: ['/assets/siteassets/sets/7.svg'],
         productingredients:
           'Hydrogenated Polysobutene, Isononyl Isononanoate, Ethylene/Propylene/Styrene Copolymer, Diisostearyl Malate, Polybutene, Aroma/Flavor, BHI, Butylene/Ethylene/Styrene Copolymer, Caprylic/Capric Triglyceride, Passiflora Edulis Seed Oil, Citrullus Vulgaris (Watermelon) Fruit Extract, Citrullus Vulgaris (Watermelon) Seed Extract, Pentaerythrityl Tetra-Di-Butyl Hydroxyhydrocinnamate, Rubus Idaeus (Raspberry) Leaf Extract, Rubus Idaeus (Raspberry) Seed Oil, Tocopherol, Tocopheryl Acetate, Triethoxycaprylylsilane.',
         whyweloveit:
