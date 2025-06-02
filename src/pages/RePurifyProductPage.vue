@@ -155,8 +155,8 @@ export default {
   data() {
     return {
       product: {
-        productid: 'reglow',
-        name: 'ReGlow Facial Cream',
+        productid: 'repurify',
+        name: 'RePurify Facial Cream',
         price: 259.0,
         discount: 0.0,
         productdescription:
@@ -184,6 +184,18 @@ export default {
             rating: 5,
             review:
               'Im obsessed with the RePurify Moisturiser! 🩵After just a few days of use, Ive noticed a significant improvement in my skin. The milia under my eyes, which had been stubbornly stuck for 8 months, are finally starting to come out! This moisturizer is perfect for oily skin, leaving a subtle glow without clogging pores. I love using it at night and waking up to soft, radiant skin. Highly recommend!',
+          },
+          {
+            name: 'Jen',
+            rating: 5,
+            review:
+              'I no longer have to dunk my head in a bowl of rice after a long day of work. This product is delicious!',
+          },
+          {
+            name: 'Sadiya Adams',
+            rating: 5,
+            review:
+              'Meant to purchase the ReGlow but can I just say all three products and my skin is like glass. My husband told me the one night, I’m not sure who you looking so sexy for 😂🤣',
           },
         ],
       },

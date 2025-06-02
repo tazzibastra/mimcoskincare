@@ -197,6 +197,12 @@ export default {
             review:
               'I LOVE THIS SERUM! I definately think you guys should make it in a bigger pump bottle',
           },
+          {
+            name: 'Sadiya Adams',
+            rating: 4,
+            review:
+              'Second part of my routine, the scent is amazing and works amazing with the cleanser',
+          },
         ],
       },
       selectedImage: product1,

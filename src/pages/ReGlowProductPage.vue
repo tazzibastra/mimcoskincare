@@ -190,6 +190,12 @@ export default {
             review:
               'Ive been using the ReGlow moisturizer for nearly a month now. I have very sensitive skin and was a bit hesitant at first as the product had a scent, but surprisingly Ive had absolutely no issues. This has been wonderful for my skin. My skin feels and looks hydrated. Ive been using this with the ReSparkle Serum, and the two together has been a win thus far! Happy I made the decision to switch to plant based skincare ✨️ ',
           },
+          {
+            name: 'Zaakira Ebrahim ',
+            rating: 5,
+            review:
+              'I am absolutely in awe of this moisturiser. It’s perfect for my skin. It absorbs so well and does not feel sticky at all. It’s a very luxurious product',
+          },
         ],
       },
       selectedImage: product1,

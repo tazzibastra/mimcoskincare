@@ -337,7 +337,7 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-const rating = ref(4)
+const rating = ref(5)
 const reviewer = ref('')
 const reviewtext = ref('')
 const email = ref('')

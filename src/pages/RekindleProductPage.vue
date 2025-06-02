@@ -180,6 +180,18 @@ export default {
             rating: 5,
             review: 'This has really help with my excess oil, also removes my make in one wash',
           },
+          {
+            name: 'Sadiya Adams',
+            rating: 5,
+            review:
+              'Totally in love with how this makes my skin feel and look. Second purchase was delivered today',
+          },
+          {
+            name: 'Zaakira Ebrahim',
+            rating: 5,
+            review:
+              'This cleanser is so beautiful to use. My skin feels refreshed but without stripping my natural oils. The smell of the product is perfect. I love this cleanser',
+          },
         ],
       },
       selectedImage: product1,

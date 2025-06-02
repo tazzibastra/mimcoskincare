@@ -186,6 +186,18 @@ export default {
             rating: 5,
             review: 'smells really good, just like watermelon',
           },
+          {
+            name: 'Zaakira Ebrahim',
+            rating: 5,
+            review:
+              'The lip oil is the perfect scent and texture. I won’t be surprised is this product along with the whole range lands up in Vogue',
+          },
+          {
+            name: 'Emma Hartley',
+            rating: 5,
+            review:
+              'This is the best Lip Oil I have ever used! I am obsessed with it, I keep it next to me 24/7 It keeps my lips nourished and super soft!',
+          },
         ],
       },
       selectedImage: product1,
