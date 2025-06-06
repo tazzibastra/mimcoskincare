@@ -128,6 +128,16 @@ const routes = [
         name: 'Signup',
         component: () => import('src/pages/systempages/SignUp.vue'),
       },
+      {
+        path: '/winterglassskin',
+        name: 'HolyGlaze',
+        component: () => import('pages/WinterGlassSkinProductPage.vue'),
+      },
+      {
+        path: '/hydrationduo',
+        name: 'HydrationDuo',
+        component: () => import('pages/HydrationDuoProductPage.vue'),
+      },
     ],
   },
   {

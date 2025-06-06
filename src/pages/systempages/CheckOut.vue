@@ -56,8 +56,8 @@
               v-model="shippingMethod"
               checked-icon="task_alt"
               unchecked-icon="panorama_fish_eye"
-              val="75.00"
-              :label="cartTotal > 550 ? 'FREE Standard Shipping' : 'R75 Standard Shipping'"
+              val="65.00"
+              :label="cartTotal > 550 ? 'FREE Standard Shipping' : 'R65 Standard Shipping'"
               @change="updateShipping"
             />
             <div style="margin-left: 39px">(2 - 3 days)</div>
@@ -78,7 +78,7 @@
             <div class="summary-item">
               <span class="item-name">Shipping:</span>
               <span class="item-price"
-                >R{{ cartTotal > 550 && shippingMethod === '75.00' ? 0 : shippingAmount }}</span
+                >R{{ cartTotal > 550 && shippingMethod === '65.00' ? 0 : shippingAmount }}</span
               >
             </div>
             <div class="summary-item">
@@ -100,7 +100,7 @@
               </h6>
               <h6 style="margin-bottom: 10px; margin-top: 20px">
                 R{{
-                  finalTotal + (cartTotal > 550 && shippingMethod === '75.00' ? 0 : shippingAmount)
+                  finalTotal + (cartTotal > 550 && shippingMethod === '65.00' ? 0 : shippingAmount)
                 }}
               </h6>
             </div>
@@ -150,10 +150,10 @@ export default {
     return {
       cart: [],
       menuVisible: false,
-      shippingMethod: '75.00', // Selected shipping method
+      shippingMethod: '65.00', // Selected shipping method
       finalAmount: 0.0,
       productAmount: 0, // Total product amount
-      shippingAmount: 75.0, // Shipping cost based on selected method
+      shippingAmount: 65.0, // Shipping cost based on selected method
       voucherNumber: '',
       voucherCode: '',
       isVoucherValid: false,
@@ -217,12 +217,12 @@ export default {
       let cartNumber = parseInt(this.cartTotal, 10)
 
       // Check if the cart total qualifies for free standard shipping
-      if (cartNumber > 550 && this.shippingMethod === '75.00') {
+      if (cartNumber > 550 && this.shippingMethod === '65.00') {
         this.shippingAmount = 0 // Free standard shipping
       } else if (this.shippingMethod === '100.00') {
         this.shippingAmount = 100.0 // Express shipping cost
-      } else if (this.shippingMethod === '75.00') {
-        this.shippingAmount = 75.0 // Standard shipping cost
+      } else if (this.shippingMethod === '65.00') {
+        this.shippingAmount = 65.0 // Standard shipping cost
       } else {
         this.shippingAmount = 0 // Default case
       }
@@ -322,7 +322,7 @@ export default {
     async proceedToOrder() {
       let cartNumber = parseInt(this.cartTotal, 10) - this.discountAmount
       // Ensure correct shipping amount before calculating final total
-      if (cartNumber > 550 && this.shippingMethod === '75.00') {
+      if (cartNumber > 550 && this.shippingMethod === '65.00') {
         this.shippingAmount = 0 // Free shipping applied
       } else {
         this.shippingAmount = parseFloat(this.shippingMethod) // Standard shipping applies

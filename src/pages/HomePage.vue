@@ -79,6 +79,143 @@
           <div
             class="title-font"
             style="text-align: center; padding-top: 40px; padding-bottom: 20px"
+          ></div>
+
+          <div class="q-pa-md q-mx-auto flex flex-col items-center justify-center summervideo">
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              style="
+                width: 100%;
+                height: 400px;
+                border-radius: 16px;
+                display: block;
+                object-fit: cover;
+              "
+            >
+              <source
+                src="assets/siteassets/SAVE MORE ON BUNDLES (1).mp4"
+                type="video/mp4"
+                media="(max-width: 768px)"
+              />
+              <source src="assets/siteassets/winter bundles.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- IMAGES SIDE BY SIDE -->
+          <div class="q-pa-sm row no-wrap justify-center items-start" style="gap: 10px">
+            <q-img
+              class="simplysummer"
+              src="assets/siteassets/fullset.png"
+              @click="goToProduct('winterglassskin')"
+            >
+              <div
+                style="
+                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                  margin-left: 10px;
+                  margin-top: 10px;
+                  padding: 8px 10px;
+                  background: rgba(0, 0, 0, 0.2);
+                  border-radius: 3px;
+                  font-size: 10px;
+                "
+              >
+                Free Shipping
+              </div>
+            </q-img>
+            <img
+              src="assets/siteassets/hydration duo with text.png"
+              alt="Image 2"
+              class="simplysummer"
+              @click="goToProduct('hydrationduo')"
+            />
+          </div>
+
+          <!-- TEXT BLOCKS SIDE BY SIDE, EVEN ON MOBILE -->
+          <div
+            class="q-pa-sm row no-wrap justify-center items-start"
+            style="gap: 10px; overflow-x: auto"
+          >
+            <!-- First Text Block -->
+            <div class="column items-center simplysummertext">
+              <div>
+                <div
+                  class="text-h7 q-mb-sm text-center"
+                  style="
+                    font-family: 'League Spartan', sans-serif;
+                    font-weight: 700;
+                    letter-spacing: -0.08em;
+                  "
+                >
+                  WINTER GLASS SKIN
+                </div>
+                <div
+                  class="text-body1 text-center"
+                  style="
+                    color: black;
+                    font-family: 'Lucida Sans', sans-serif;
+                    margin: 10px;
+                    font-size: 13px;
+                  "
+                >
+                  The perfect winter bundle to hydrate, replenish, and protect your skin and lips
+                  from dry, cold, winter weather.<br /><br />
+                  <span style="text-decoration: line-through; color: #888">R 872</span>
+                  <span style="color: #000; font-weight: bold; margin-left: 8px">R 630</span>
+                </div>
+              </div>
+              <q-btn
+                label="Add To Cart"
+                color="black"
+                class="q-mt-md"
+                @click="handleAddToCart(GlassSkin)"
+              />
+            </div>
+
+            <!-- Second Text Block -->
+            <div class="column items-center simplysummertext">
+              <div>
+                <div
+                  class="text-h7 q-mb-sm text-center"
+                  style="
+                    font-family: 'League Spartan', sans-serif;
+                    font-weight: 700;
+                    letter-spacing: -0.08em;
+                  "
+                >
+                  HYDRATION DUO
+                </div>
+                <div
+                  class="text-body1 text-center"
+                  style="
+                    color: black;
+                    font-family: 'Lucida Sans', sans-serif;
+                    margin: 10px;
+                    font-size: 13px;
+                  "
+                >
+                  A simplified winter essential bundle —a hydrating serum and lip treatment duo to
+                  combat dry, winter skin and lips<br /><br />
+                  <span style="text-decoration: line-through; color: #888">R 409</span>
+                  <span style="color: #000; font-weight: bold; margin-left: 8px">R 360</span>
+                </div>
+              </div>
+              <q-btn
+                label="Add To Cart"
+                color="black"
+                class="q-mt-md"
+                @click="handleAddToCart(HydrationDuo)"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="title-font"
+            style="text-align: center; padding-top: 40px; padding-bottom: 20px"
           >
             <img
               src="assets/siteassets/flower.png"
@@ -146,7 +283,7 @@
                 muted
                 loop
                 playsinline
-                style="width: 100%; height: 100%; object-fit: cover; border-radius: inherit"
+                style="width: 100%; object-fit: cover; border-radius: inherit"
               >
                 <source src="assets/siteassets/homesetsection/video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -594,6 +731,32 @@ export default {
           totalreviews: '4 reviews',
         },
       ],
+      productscollab: [
+        {
+          productid: 'collabbundle1',
+          name: 'Rosa',
+          image: 'assets/siteassets/ReKindle/rekindle.png',
+          description: 'Plump + Ultra-hydrating dewy serum with Tremella Mushroom',
+          price: 289.0,
+          discount: 0.0,
+          units: 10,
+          skintype: 'All Skin',
+          rating: 4.5,
+          totalreviews: '7 reviews',
+        },
+        {
+          productid: 'collabbundle1',
+          name: 'ReKindle',
+          image: 'assets/siteassets/ReKindle/rekindle.png',
+          description: 'Breakout Prevention Purifying Cleanser + Makeup Remover',
+          price: 159.0,
+          discount: 0.0,
+          units: 10,
+          skintype: 'Oily Skin',
+          rating: 4,
+          totalreviews: '1 reviews',
+        },
+      ],
       cleansers: [
         {
           productid: 'rekindle',
@@ -642,6 +805,30 @@ export default {
         image: 'assets/siteassets/mirror.jpg',
         description: 'Hand',
         price: 150.0,
+        discount: 0.0,
+        units: 15,
+        skintype: '',
+        rating: 5,
+        totalreviews: '1 reviews',
+      },
+      GlassSkin: {
+        productid: 'GlassSkin',
+        name: 'Winter Glass Skin',
+        image: 'assets/siteassets/fullset.png',
+        description: 'Hand',
+        price: 630.0,
+        discount: 0.0,
+        units: 15,
+        skintype: '',
+        rating: 5,
+        totalreviews: '1 reviews',
+      },
+      HydrationDuo: {
+        productid: 'HydrationDuo',
+        name: 'Hydration Duo',
+        image: 'assets/siteassets/hydration duo with text.png',
+        description: 'Hand',
+        price: 360.0,
         discount: 0.0,
         units: 15,
         skintype: '',
@@ -1151,13 +1338,34 @@ export default {
   margin-bottom: 50px;
 }
 
+.simplysummer {
+  width: 38%;
+  height: 600px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.simplysummertext {
+  min-width: 38%;
+  max-width: 38%;
+}
+.summervideo {
+  width: 80%;
+
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
 @media (max-width: 640px) {
   .socialmedia {
     height: 100%;
     object-fit: cover;
     padding: 0px !important;
   }
-
+  .simplysummertext {
+    min-width: 48%;
+    max-width: 48%;
+  }
   .socialmediacontainer {
     width: 90%;
     height: 90%;
@@ -1165,6 +1373,22 @@ export default {
     margin-bottom: 50px;
 
     margin-left: 5px;
+  }
+
+  .simplysummer {
+    width: 48%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .summervideo {
+    width: 95%;
+
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
   }
 }
 </style>
