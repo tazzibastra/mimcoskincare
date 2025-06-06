@@ -40,7 +40,19 @@
           R {{ product.price }}
           <span style="text-decoration: line-through; color: #888">R 409</span>
         </p>
-
+        <q-select
+          v-model="selectedflavour"
+          :options="options"
+          label="Select a Lip Treatment"
+          option-label="label"
+          option-value="value"
+          emit-value
+          map-options
+          filled
+          class="black-white-dropdown"
+          popup-content-class="black-white-dropdown__popup"
+          @update:model-value="updatePrice"
+        />
         <div class="q-mb-md row items-center">
           <q-btn flat label="Add to Cart" class="addtocartbtn" @click="handleAddToCart(product)" />
           <!-- <div style="margin-left: 10px"></div>
@@ -88,7 +100,7 @@ export default {
       product: {
         productid: 'simplysummerbundle2',
         name: 'Hydration Duo',
-        price: 360.0,
+        price: 315.0,
         discount: 0.0,
         productdescription:
           'A simplified winter essential — a hydrating serum and lip treatment duo to combat dry, winter skin.',
@@ -105,6 +117,7 @@ export default {
         howtouse:
           'After cleansing and applying serums, massage moisturizer into skin, morning and night',
         overalrating: 4.5,
+        flavour: 'Color Changing - Light Pink',
         reviews: [
           {
             name: 'feroeskab',
@@ -132,6 +145,18 @@ export default {
       },
       selectedImage: product1,
       quantity: 1,
+      selectedflavour: '',
+      options: [
+        { label: 'Color Changing - Light Pink', value: 'pink', price: 99 },
+        { label: 'STRAWBERRY MATCHA DREAM PEPTIDE LIP TREATMENT', value: 'strawberry', price: 180 },
+        { label: 'Vanilla Latte - Tinted Peptide Lip Treatment', value: 'latte', price: 115 },
+        {
+          label: 'Marshmellow Fluff - Tinted Shimmer Peptide Lip Treatment',
+          value: 'marshmellow',
+          price: 115,
+        },
+        { label: 'Sweet Treat - Tinted Peptide Lip Treatment', value: 'sweet', price: 115 },
+      ],
       icons: [
         {
           src: '//kyliecosmetics.com/cdn/shop/files/Circle_KC_Icons_-_Vegan.png?v=1670875011&width=200&height=200',
@@ -148,12 +173,20 @@ export default {
       ],
     }
   },
+
   methods: {
     setSelectedImage(img) {
       this.selectedImage = img
     },
     addToCart() {
       console.log(`Added ${this.quantity} of "${this.product.name}" to cart.`)
+    },
+
+    updatePrice(selectedValue) {
+      const selectedOption = this.options.find((opt) => opt.value === selectedValue)
+      if (selectedOption) {
+        this.product.price = 216 + selectedOption.price
+      }
     },
     async handleAddToCart(product) {
       const auth = getAuth()
@@ -204,7 +237,7 @@ export default {
         const cartItem = {
           id: product.productid, // maps to store's 'id'
           image: this.selectedImage, // same as product.image
-          name: product.name, // store expects 'name' (itemname in Firestore)
+          name: `${product.name} - ${this.selectedflavour}`, // store expects 'name' (itemname in Firestore)
           price: product.price, // store expects 'price' (itemprice in Firestore)
           units: 1, // starting with 1 unit
           createdAt: new Date().toISOString(), // include a timestamp if needed
@@ -234,7 +267,7 @@ export default {
       const newTrackingEntry = {
         sessionID: sessionID, // Use the session ID for both logged-in and logged-out users
         timestamp: new Date().toISOString(), // Store the timestamp of the page visit
-        pagename: 'ReGlow Product Page',
+        pagename: 'Hydration Dua',
       }
 
       // Add the tracking data to Firestore
